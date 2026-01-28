@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Contact – Sofie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ommeg.html">About me</a>
+      <a href="prosjekter.html">My work</a>
+      <a class="active" href="kontakt.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="height:260px;">
+  <div class="hero-blob"></div>
+  <div class="hero-content">
+    <h1>Contact</h1>
+    <div class="line"></div>
+    <p>Send me a message and I’ll get back to you.</p>
+  </div>
+</section>
+
+<main class="container">
+
+  <section class="contact-grid">
+
+    <div class="card pad">
+      <h2>Send a message</h2>
+      <p class="muted">Fill in the form below and press send.</p>
+
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="fb2b6bf9-4d1f-42ad-892b-a0c30c926977">
+        <input type="checkbox" name="botcheck" style="display:none;">
+        <input type="hidden" name="subject" value="New message from portfolio">
+        <input type="hidden" name="from_name" value="Sofie Portfolio">
+
+        <label>
+          Name
+          <input type="text" name="name" placeholder="Your name" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" placeholder="your@email.com" required>
+        </label>
+
+        <label>
+          Phone number
+          <input type="tel" name="phone" placeholder="+47 123 45 678">
+        </label>
+
+        <label>
+          Message
+          <textarea name="message" rows="6" placeholder="Write your message..." required></textarea>
+        </label>
+
+        <button class="btn" type="submit">Send message →</button>
+        <a class="btn secondary" href="index.html">← Back to home</a>
+      </form>
+    </div>
+
+    <div class="card pad quick">
+      <h2>Contact info</h2>
+      <p class="muted">You can also reach me directly:</p>
+
+      <p class="contact-direct">
+        📞 <a href="tel:+4712345678">+47 12 34 56 78</a><br>
+        ✉️ <a href="mailto:dinmail@gmail.com">dinmail@gmail.com</a>
+      </p>
+
+      <p class="muted" style="margin-top:12px;">
+        If the form doesn’t submit, add <b>localhost</b> or <b>127.0.0.1</b> in Allowed Domains on Web3Forms.
+      </p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Sofie</div>
+    <div>Contact</div>
+  </div>
+</footer>
+
+</body>
+</html>

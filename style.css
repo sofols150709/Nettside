@@ -1,17 +1,17 @@
 :root{
   /* Palette - Sofie sin personlighet */
-  --bg: #F5F7FA;        /* lys blå bakgrunn */
-  --blue: #4B7EC4;      /* medium blå */
-  --blue-light: #E8F0FA; /* veldig lys blå */
-  --blue-dark: #2C5AA0; /* mørk blå */
-  --accent: #FF8C42;    /* varmt oransje */
-  --accent2: #E67E22;   /* dypere oransje */
-  --muted: #7A8A99;     /* blågrå */
-  --dark: #2C3E50;      /* mørk blågrå */
+  --bg: #EEF2F8;        /* lys blå bakgrunn */
+  --blue: #2C5AA0;      /* medium-mørk blå */
+  --blue-light: #D4E3F7; /* lys blå */
+  --blue-dark: #1a3a6f; /* mørk blå */
+  --accent: #2C5AA0;    /* blå for accents */
+  --accent2: #1a3a6f;   /* dypere blå */
+  --muted: #5A7A99;     /* blågrå */
+  --dark: #1F3A52;      /* veldig mørk blågrå */
 
   /* For detaljer */
-  --floral: #F0B5D8;    /* lyst rosa for blomster */
-  --floral-dark: #D89BC6; /* dypere rosa */
+  --floral: #C5D9ED;    /* lys blå for detaljer */
+  --floral-dark: #4B7EC4; /* medium blå */
 
   /* UI */
   --card: #ffffff;
@@ -76,7 +76,7 @@ nav a::after{
   bottom:-7px;
   height:2px;
   border-radius:99px;
-  background: linear-gradient(to right, transparent, var(--accent), var(--accent2), transparent);
+  background: linear-gradient(to right, transparent, var(--blue), var(--blue-dark), transparent);
   transform: scaleX(0);
   transform-origin:left;
   transition: transform .2s ease;
@@ -89,7 +89,7 @@ nav a.active{ opacity:1; }
 .hero{
   /* Full-height hero seksjonen */
   height: 100vh;
-  background: linear-gradient(135deg, #E8F0FA 0%, #F5F7FA 50%, #F0F5FF 100%);
+  background: linear-gradient(135deg, #C5D9ED 0%, #EEF2F8 50%, #D4E3F7 100%);
   overflow: hidden;
   position: relative;
   display: flex;
@@ -197,15 +197,15 @@ nav a.active{ opacity:1; }
 .hero-inner::before{
   content:"";
   position:absolute;
-  width: 700px;
-  height: 700px;
+  width: 800px;
+  height: 800px;
   background: radial-gradient(circle at center,
-    rgba(75, 126, 196, 0.15) 0%,
-    rgba(75, 126, 196, 0.08) 35%,
+    rgba(44, 90, 160, 0.25) 0%,
+    rgba(44, 90, 160, 0.12) 35%,
     transparent 70%
   );
-  top: -200px;
-  right: -150px;
+  top: -250px;
+  right: -200px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -215,14 +215,14 @@ nav a.active{ opacity:1; }
 .hero-inner::after{
   content:"";
   position:absolute;
-  width: 500px;
-  height: 500px;
+  width: 600px;
+  height: 600px;
   background: radial-gradient(circle at center,
-    rgba(240, 181, 216, 0.12) 0%,
+    rgba(26, 58, 111, 0.18) 0%,
     transparent 65%
   );
-  bottom: -100px;
-  left: -80px;
+  bottom: -150px;
+  left: -120px;
   border-radius: 50%;
   pointer-events: none;
   z-index: 0;
@@ -284,10 +284,10 @@ nav a.active{ opacity:1; }
 .line{
   width: 80px;
   height: 5px;
-  background: linear-gradient(to right, var(--accent), var(--accent2));
+  background: linear-gradient(to right, var(--blue), var(--blue-dark));
   border-radius: 999px;
   margin: 18px 0 20px;
-  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.25);
+  box-shadow: 0 4px 12px rgba(44, 90, 160, 0.3);
 }
 
 .hero-text p{
@@ -318,8 +318,8 @@ nav a.active{ opacity:1; }
   border: 8px solid white;
   background: white;
   box-shadow:
-    0 20px 50px rgba(44, 94, 160, 0.15),
-    0 0 0 2px rgba(75, 126, 196, 0.1);
+    0 25px 50px rgba(26, 58, 111, 0.25),
+    0 0 0 2px rgba(44, 90, 160, 0.15);
   position: relative;
 }
 
@@ -330,10 +330,10 @@ nav a.active{ opacity:1; }
   width: 420px;
   height: 420px;
   border-radius: 30px;
-  background: radial-gradient(circle at 15% 15%, rgba(240, 181, 216, 0.2) 0%, transparent 20%),
-              radial-gradient(circle at 85% 15%, rgba(240, 181, 216, 0.18) 0%, transparent 18%),
-              radial-gradient(circle at 85% 85%, rgba(75, 126, 196, 0.12) 0%, transparent 18%),
-              radial-gradient(circle at 15% 85%, rgba(75, 126, 196, 0.1) 0%, transparent 20%);
+  background: radial-gradient(circle at 15% 15%, rgba(44, 90, 160, 0.15) 0%, transparent 20%),
+              radial-gradient(circle at 85% 15%, rgba(44, 90, 160, 0.12) 0%, transparent 18%),
+              radial-gradient(circle at 85% 85%, rgba(26, 58, 111, 0.12) 0%, transparent 18%),
+              radial-gradient(circle at 15% 85%, rgba(26, 58, 111, 0.1) 0%, transparent 20%);
   pointer-events: none;
   z-index: 1;
 }
@@ -350,15 +350,16 @@ nav a.active{ opacity:1; }
   background: white;
   border-radius: 12px;
   padding: 40px;
-  box-shadow: 0 2px 12px rgba(44, 62, 80, 0.06);
-  border: 1px solid rgba(75, 126, 196, 0.08);
+  box-shadow: 0 4px 16px rgba(26, 58, 111, 0.1);
+  border: 1px solid rgba(44, 90, 160, 0.12);
   position: relative;
   animation: slideInUp 0.8s ease-out 0.35s both;
-  transition: box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .card:hover {
-  box-shadow: 0 8px 24px rgba(44, 62, 80, 0.1);
+  box-shadow: 0 12px 32px rgba(26, 58, 111, 0.15);
+  transform: translateY(-2px);
 }
 
 /* liten “accent corner” (detalj, ikke rot) */
@@ -370,7 +371,7 @@ nav a.active{ opacity:1; }
   width:120px;
   height:120px;
   border-top-right-radius: 12px;
-  background: radial-gradient(circle at 70% 30%, rgba(75, 126, 196, 0.06), transparent 60%);
+  background: radial-gradient(circle at 70% 30%, rgba(44, 90, 160, 0.1), transparent 60%);
   pointer-events:none;
 }
 
@@ -384,24 +385,24 @@ nav a.active{ opacity:1; }
   display:inline-flex;
   align-items:center;
   justify-content:center;
-  padding: 12px 18px;
-  border-radius: 12px;
+  padding: 12px 24px;
+  border-radius: 8px;
   font-weight: 800;
   text-decoration:none;
   color: white;
-  background: linear-gradient(to right, var(--accent), var(--accent2));
-  box-shadow: 0 12px 26px rgba(215,101,46,0.25);
-  transition: transform .12s ease, filter .12s ease;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--blue-dark) 100%);
+  box-shadow: 0 6px 20px rgba(26, 58, 111, 0.25);
+  transition: transform .12s ease, box-shadow .12s ease;
 }
 .btn:hover{
-  transform: translateY(-1px);
-  filter: saturate(1.05);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(26, 58, 111, 0.35);
 }
 
 .btn.secondary{
-  background: rgba(255,255,255,0.92);
-  color: var(--dark);
-  border: 1px solid var(--line);
+  background: linear-gradient(135deg, rgba(44, 90, 160, 0.1) 0%, rgba(26, 58, 111, 0.08) 100%);
+  color: var(--blue-dark);
+  border: 2px solid var(--blue);
   box-shadow: none;
 }
 
@@ -435,10 +436,10 @@ nav a.active{ opacity:1; }
 
 .project{
   background:white;
-  border-radius: 16px;
+  border-radius: 12px;
   overflow:hidden;
-  box-shadow: var(--shadowSoft);
-  border: 1px solid rgba(75,69,66,0.07);
+  box-shadow: 0 4px 16px rgba(26, 58, 111, 0.1);
+  border: 1px solid rgba(44, 90, 160, 0.1);
   transition: transform .16s ease, box-shadow .16s ease;
   animation: slideInUp 0.8s ease-out both;
 }
@@ -455,8 +456,8 @@ nav a.active{ opacity:1; }
   animation-delay: 0.75s;
 }
 .project:hover{
-  transform: translateY(-2px);
-  box-shadow: 0 16px 34px rgba(75,69,66,0.16);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(26, 58, 111, 0.15);
 }
 
 .project img{
@@ -469,7 +470,7 @@ nav a.active{ opacity:1; }
 .project .ptitle{ font-weight: 900; }
 .project .pdesc{ font-size:14px; color: var(--muted); line-height: 1.55; }
 .project a{
-  color: var(--accent2);
+  color: var(--blue);
   font-weight: 800;
   text-decoration:none;
 }
@@ -545,8 +546,8 @@ footer{
 
 .contact-form-pro input:focus,
 .contact-form-pro textarea:focus{
-  border-color: var(--accent2);
-  box-shadow: 0 0 0 4px rgba(215,101,46,0.18);
+  border-color: var(--blue);
+  box-shadow: 0 0 0 4px rgba(44, 90, 160, 0.15);
 }
 
 .contact-form-pro textarea{ resize: none; }
@@ -577,7 +578,7 @@ footer{
 }
 
 .contact-link{
-  color: var(--accent2);
+  color: var(--blue);
   font-weight: 900;
   text-decoration: none;
 }

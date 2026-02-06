@@ -2,20 +2,21 @@
 <html lang="no">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>SmoothMe Project – Sofie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SmoothMe – Sofie</title>
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
 <header class="top-header">
   <div class="header-inner">
     <img src="images/logo.png" alt="Logo" class="logo">
     <nav>
-      <a href="index.html">Home</a>
-      <a href="ommeg.html">About me</a>
-      <a class="active" href="prosjekter.html">My work</a>
-      <a href="kontakt.html">Contact</a>
+      <a href="index.html">Hjem</a>
+      <a href="ommeg.html">Om meg</a>
+      <a class="active" href="prosjekter.html">Arbeidene mine</a>
+      <a href="kontakt.html">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -23,10 +24,10 @@
 <section class="hero" style="height:280px; background: linear-gradient(135deg, #D4E3F7 0%, #EEF2F8 100%);">
   <div class="hero-inner">
     <div class="hero-text">
-      <div class="hero-tag">💧 Skincare Application</div>
-      <h1>SmoothMe Project</h1>
+      <div class="hero-tag">Hverdagslige smoothier</div>
+      <h1>SmoothMe</h1>
       <div class="line"></div>
-      <p>Interactive skincare product showcase with image gallery</p>
+      <p>Et prosjekt om å gjøre smoothier enklere i hverdagen</p>
     </div>
   </div>
 </section>
@@ -34,76 +35,93 @@
 <main class="container">
 
   <article class="project-detail">
-    
+
     <div class="detail-header">
       <div class="detail-meta">
         <span class="badge">Frontend</span>
-        <span class="badge">Interactive</span>
+        <span class="badge">Interaktiv</span>
       </div>
     </div>
 
     <div class="detail-section">
-      <h2>Project Overview</h2>
-      <p>SmoothMe er et prosjekt der jeg prøvde å lage en moderne og myk (smooth) visuell stil. Målet var å få siden til å føles gjennomført med gode farger, knapper og en tydelig "hero"-seksjon. Jeg øvde på responsivt design og på å bygge gjenbrukbare seksjoner. Jeg lagde den for å prøve å finne en kreativ måte å gjøre smoothier mer hverdagslig. Jeg la til en quiz som forteller deg hvilken smoothie du er basert på svarene dine, også lagde jeg lister på smoothier og sånt basert på hva brukeren vil oppnå. Det var mitt første prosjekt på videregående.</p>
+      <h2>Om prosjektet</h2>
+      <p>
+        SmoothMe er et prosjekt der jeg ville gjøre smoothier mer hverdagslige og lett tilgjengelige.
+        Jeg fokuserte på en rolig og myk stil, med fine farger og tydelige knapper.
+        Målet var at nettsiden skulle være enkel å bruke og lett å forstå.
+        Prosjektet gir idéer til smoothier og forslag til smoothie-planer for uker,
+        basert på hva brukeren vil oppnå, for eksempel mer energi eller sunnere vaner.
+        Jeg lagde også en quiz som forteller hvilken smoothie du er, basert på svarene dine.
+        Dette var mitt første prosjekt på videregående.
+      </p>
     </div>
 
     <div class="detail-section">
-      <h2>Gallery</h2>
+      <h2>Bildegalleri</h2>
+
       <div class="image-gallery">
         <div class="gallery-container">
-          <img id="galleryImage" src="https://no.pinterest.com/pin/1071575305112570523/" alt="SmoothMe Gallery Image" class="gallery-image">
+          <img
+            id="galleryImage"
+            src="https://i.pinimg.com/736x/08/a1/43/08a143e2dcaa0a108f3eef43b7dd1871.jpg"
+            alt="Bilde fra SmoothMe-prosjektet"
+            class="gallery-image"
+          >
         </div>
+
         <div class="gallery-controls">
-          <button id="prevBtn" class="gallery-btn">← Previous</button>
+          <button id="prevBtn" class="gallery-btn" type="button">← Forrige</button>
           <span id="imageCounter" class="image-counter">1 / 4</span>
-          <button id="nextBtn" class="gallery-btn">Next →</button>
+          <button id="nextBtn" class="gallery-btn" type="button">Neste →</button>
         </div>
       </div>
     </div>
 
     <div class="detail-section">
-      <h2>Features</h2>
+      <h2>Funksjoner</h2>
       <ul class="features-list">
-        <li>Interactive image gallery with navigation buttons</li>
-        <li>Product image carousel</li>
-        <li>Counter showing current image position</li>
-        <li>Smooth image transitions</li>
-        <li>Keyboard navigation support</li>
-        <li>Responsive design</li>
+        <li>Interaktivt bildegalleri</li>
+        <li>Bla mellom bilder med knapper</li>
+        <li>Teller som viser hvilket bilde du er på</li>
+        <li>Myke overganger mellom bildene</li>
+        <li>Støtte for piltaster på tastaturet</li>
+        <li>Tilpasset mobil og PC</li>
       </ul>
     </div>
 
     <div class="detail-section">
-      <h2>Technologies Used</h2>
+      <h2>Teknologier brukt</h2>
       <div class="tech-stack">
-        <span class="tech-tag">HTML5</span>
-        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">HTML</span>
+        <span class="tech-tag">CSS</span>
         <span class="tech-tag">JavaScript</span>
-        <span class="tech-tag">DOM Manipulation</span>
-        <span class="tech-tag">Event Listeners</span>
+        <span class="tech-tag">DOM</span>
+        <span class="tech-tag">Event listeners</span>
       </div>
     </div>
 
     <div class="detail-section">
-      <h2>My Role & Responsibilities</h2>
-      <p>I developed the entire interactive gallery system including:</p>
+      <h2>Min rolle</h2>
+      <p>Jeg lagde hele bildegalleriet selv. Dette jobbet jeg med:</p>
       <ul class="features-list">
-        <li>HTML structure and semantic markup</li>
-        <li>CSS styling with animations</li>
-        <li>JavaScript gallery logic</li>
-        <li>Button click event handlers</li>
-        <li>Image counter functionality</li>
+        <li>HTML-struktur</li>
+        <li>CSS og enkle animasjoner</li>
+        <li>JavaScript-logikk for galleriet</li>
+        <li>Knapper for å bytte bilde</li>
+        <li>Teller som viser bilde nummer</li>
       </ul>
     </div>
 
     <div class="detail-section">
-      <h2>Gallery Implementation</h2>
-      <p><strong>Note:</strong> This gallery showcases the SmoothMe project with placeholder images. The gallery navigation allows you to browse through product images using the Previous and Next buttons.</p>
+      <h2>Hvordan galleriet fungerer</h2>
+      <p>
+        <strong>Info:</strong> Galleriet viser bilder fra SmoothMe-prosjektet.
+        Du kan bla mellom bildene med knappene, eller bruke piltastene på tastaturet.
+      </p>
     </div>
 
     <div class="detail-footer">
-      <a href="prosjekter.html" class="btn secondary">← Back to Projects</a>
-
+      <a href="prosjekter.html" class="btn secondary">← Tilbake til prosjekter</a>
     </div>
 
   </article>
@@ -113,56 +131,9 @@
 <footer>
   <div class="footer-inner">
     <div>© 2026 Sofie</div>
-    <div>SmoothMe Project</div>
+    <div>SmoothMe</div>
   </div>
 </footer>
-
-<script>
-let currentImageIndex = 1;
-const smoothmeImages = [
-  'https://no.pinterest.com/pin/1071575305112570523/',
-  'https://no.pinterest.com/pin/1071575305112570528/',
-  'https://no.pinterest.com/pin/1071575305112570522/',
-  'https://no.pinterest.com/pin/1071575305112570524/'
-];
-const totalImages = smoothmeImages.length;
-
-function updateGallery() {
-  const imagePath = smoothmeImages[currentImageIndex - 1];
-  document.getElementById('galleryImage').src = imagePath;
-  document.getElementById('imageCounter').textContent = `${currentImageIndex} / ${totalImages}`;
-}
-
-document.getElementById('nextBtn').addEventListener('click', function() {
-  if (currentImageIndex < totalImages) {
-    currentImageIndex++;
-  } else {
-    currentImageIndex = 1;
-  }
-  updateGallery();
-});
-
-document.getElementById('prevBtn').addEventListener('click', function() {
-  if (currentImageIndex > 1) {
-    currentImageIndex--;
-  } else {
-    currentImageIndex = totalImages;
-  }
-  updateGallery();
-});
-
-// Keyboard navigation
-document.addEventListener('keydown', function(event) {
-  if (event.key === 'ArrowRight') {
-    document.getElementById('nextBtn').click();
-  } else if (event.key === 'ArrowLeft') {
-    document.getElementById('prevBtn').click();
-  }
-});
-
-// Initialize
-updateGallery();
-</script>
 
 </body>
 </html>

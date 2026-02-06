@@ -51,11 +51,11 @@
       <h2>Gallery</h2>
       <div class="image-gallery">
         <div class="gallery-container">
-          <img id="galleryImage" src="images/smoothme1.jpg" alt="SmoothMe Gallery Image" class="gallery-image">
+          <img id="galleryImage" src="https://no.pinterest.com/pin/1071575305112570523/" alt="SmoothMe Gallery Image" class="gallery-image">
         </div>
         <div class="gallery-controls">
           <button id="prevBtn" class="gallery-btn">← Previous</button>
-          <span id="imageCounter" class="image-counter">1 / 1</span>
+          <span id="imageCounter" class="image-counter">1 / 4</span>
           <button id="nextBtn" class="gallery-btn">Next →</button>
         </div>
       </div>
@@ -119,10 +119,16 @@
 
 <script>
 let currentImageIndex = 1;
-const totalImages = 1;
+const smoothmeImages = [
+  'https://no.pinterest.com/pin/1071575305112570523/',
+  'https://no.pinterest.com/pin/1071575305112570528/',
+  'https://no.pinterest.com/pin/1071575305112570522/',
+  'https://no.pinterest.com/pin/1071575305112570524/'
+];
+const totalImages = smoothmeImages.length;
 
 function updateGallery() {
-  const imagePath = `images/smoothme${currentImageIndex}.jpg`;
+  const imagePath = smoothmeImages[currentImageIndex - 1];
   document.getElementById('galleryImage').src = imagePath;
   document.getElementById('imageCounter').textContent = `${currentImageIndex} / ${totalImages}`;
 }

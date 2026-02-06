@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>SmoothMe Project – Sofie</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="top-header">
+  <div class="header-inner">
+    <img src="images/logo.png" alt="Logo" class="logo">
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="ommeg.html">About me</a>
+      <a class="active" href="prosjekter.html">My work</a>
+      <a href="kontakt.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" style="height:280px; background: linear-gradient(135deg, #D4E3F7 0%, #EEF2F8 100%);">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-tag">💧 Skincare Application</div>
+      <h1>SmoothMe Project</h1>
+      <div class="line"></div>
+      <p>Interactive skincare product showcase with image gallery</p>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+
+  <article class="project-detail">
+    
+    <div class="detail-header">
+      <div class="detail-meta">
+        <span class="badge">Frontend</span>
+        <span class="badge">Interactive</span>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Project Overview</h2>
+      <p>SmoothMe is an interactive skincare application designed to showcase beauty products in an engaging way. The project demonstrates advanced JavaScript functionality with an interactive image gallery system.</p>
+    </div>
+
+    <div class="detail-section">
+      <h2>Gallery</h2>
+      <div class="image-gallery">
+        <div class="gallery-container">
+          <img id="galleryImage" src="images/smoothme1.jpg" alt="SmoothMe Gallery Image" class="gallery-image">
+        </div>
+        <div class="gallery-controls">
+          <button id="prevBtn" class="gallery-btn">← Previous</button>
+          <span id="imageCounter" class="image-counter">1 / 5</span>
+          <button id="nextBtn" class="gallery-btn">Next →</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>Features</h2>
+      <ul class="features-list">
+        <li>Interactive image gallery with navigation buttons</li>
+        <li>Product image carousel</li>
+        <li>Counter showing current image position</li>
+        <li>Smooth image transitions</li>
+        <li>Keyboard navigation support</li>
+        <li>Responsive design</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>Technologies Used</h2>
+      <div class="tech-stack">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript</span>
+        <span class="tech-tag">DOM Manipulation</span>
+        <span class="tech-tag">Event Listeners</span>
+      </div>
+    </div>
+
+    <div class="detail-section">
+      <h2>My Role & Responsibilities</h2>
+      <p>I developed the entire interactive gallery system including:</p>
+      <ul class="features-list">
+        <li>HTML structure and semantic markup</li>
+        <li>CSS styling with animations</li>
+        <li>JavaScript gallery logic</li>
+        <li>Button click event handlers</li>
+        <li>Image counter functionality</li>
+      </ul>
+    </div>
+
+    <div class="detail-section">
+      <h2>Gallery Implementation</h2>
+      <p><strong>Note:</strong> This gallery showcases the SmoothMe project with placeholder images. The gallery navigation allows you to browse through product images using the Previous and Next buttons.</p>
+    </div>
+
+    <div class="detail-footer">
+      <a href="prosjekter.html" class="btn secondary">← Back to Projects</a>
+      <a href="Smooth%20Me/index.html" target="_blank" rel="noopener noreferrer" class="btn">Visit SmoothMe →</a>
+    </div>
+
+  </article>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div>© 2026 Sofie</div>
+    <div>SmoothMe Project</div>
+  </div>
+</footer>
+
+<script>
+let currentImageIndex = 1;
+const totalImages = 5;
+
+function updateGallery() {
+  const imagePath = `images/smoothme${currentImageIndex}.jpg`;
+  document.getElementById('galleryImage').src = imagePath;
+  document.getElementById('imageCounter').textContent = `${currentImageIndex} / ${totalImages}`;
+}
+
+document.getElementById('nextBtn').addEventListener('click', function() {
+  if (currentImageIndex < totalImages) {
+    currentImageIndex++;
+  } else {
+    currentImageIndex = 1;
+  }
+  updateGallery();
+});
+
+document.getElementById('prevBtn').addEventListener('click', function() {
+  if (currentImageIndex > 1) {
+    currentImageIndex--;
+  } else {
+    currentImageIndex = totalImages;
+  }
+  updateGallery();
+});
+
+// Keyboard navigation
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'ArrowRight') {
+    document.getElementById('nextBtn').click();
+  } else if (event.key === 'ArrowLeft') {
+    document.getElementById('prevBtn').click();
+  }
+});
+
+// Initialize
+updateGallery();
+</script>
+
+</body>
+</html>
